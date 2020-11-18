@@ -13,7 +13,26 @@
 		7B612DDD2564A6C100F1C5BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B612DDB2564A6C100F1C5BB /* Main.storyboard */; };
 		7B612DDF2564A6C700F1C5BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B612DDE2564A6C700F1C5BB /* Assets.xcassets */; };
 		7B612DE22564A6C700F1C5BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B612DE02564A6C700F1C5BB /* LaunchScreen.storyboard */; };
+		7B612E632564B96800F1C5BB /* AmazonChimeSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B612E622564B96800F1C5BB /* AmazonChimeSDK.framework */; };
+		7B612E642564B96800F1C5BB /* AmazonChimeSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7B612E622564B96800F1C5BB /* AmazonChimeSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7B612E672564B97500F1C5BB /* AmazonChimeSDKMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B612E662564B97500F1C5BB /* AmazonChimeSDKMedia.framework */; };
+		7B612E682564B97500F1C5BB /* AmazonChimeSDKMedia.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7B612E662564B97500F1C5BB /* AmazonChimeSDKMedia.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7B612E652564B96800F1C5BB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7B612E642564B96800F1C5BB /* AmazonChimeSDK.framework in Embed Frameworks */,
+				7B612E682564B97500F1C5BB /* AmazonChimeSDKMedia.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7B612DD22564A6C100F1C5BB /* AmazonChimeSDKforCarthage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmazonChimeSDKforCarthage.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +43,9 @@
 		7B612DDE2564A6C700F1C5BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B612DE12564A6C700F1C5BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B612DE32564A6C700F1C5BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B612E5D2564B60A00F1C5BB /* AmazonChimeSDKSample.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AmazonChimeSDKSample.framework; path = Carthage/Build/iOS/AmazonChimeSDKSample.framework; sourceTree = "<group>"; };
+		7B612E622564B96800F1C5BB /* AmazonChimeSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AmazonChimeSDK.framework; path = Carthage/Checkouts/AmazonChimeSDKSample/Frameworks/AmazonChimeSDK.framework; sourceTree = "<group>"; };
+		7B612E662564B97500F1C5BB /* AmazonChimeSDKMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AmazonChimeSDKMedia.framework; path = Carthage/Checkouts/AmazonChimeSDKSample/Frameworks/AmazonChimeSDKMedia.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B612E632564B96800F1C5BB /* AmazonChimeSDK.framework in Frameworks */,
+				7B612E672564B97500F1C5BB /* AmazonChimeSDKMedia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +66,7 @@
 			children = (
 				7B612DD42564A6C100F1C5BB /* AmazonChimeSDKforCarthage */,
 				7B612DD32564A6C100F1C5BB /* Products */,
+				7B612E5C2564B60A00F1C5BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +92,16 @@
 			path = AmazonChimeSDKforCarthage;
 			sourceTree = "<group>";
 		};
+		7B612E5C2564B60A00F1C5BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B612E662564B97500F1C5BB /* AmazonChimeSDKMedia.framework */,
+				7B612E622564B96800F1C5BB /* AmazonChimeSDK.framework */,
+				7B612E5D2564B60A00F1C5BB /* AmazonChimeSDKSample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +109,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B612DE62564A6C700F1C5BB /* Build configuration list for PBXNativeTarget "AmazonChimeSDKforCarthage" */;
 			buildPhases = (
+				7B612E5A2564B50E00F1C5BB /* Carthage */,
+				7B612E692564BAA200F1C5BB /* ShellScript */,
 				7B612DCE2564A6C100F1C5BB /* Sources */,
 				7B612DCF2564A6C100F1C5BB /* Frameworks */,
 				7B612DD02564A6C100F1C5BB /* Resources */,
+				7B612E652564B96800F1C5BB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +169,46 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7B612E5A2564B50E00F1C5BB /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/AmazonChimeSDKSample.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/AmazonChimeSDKSample.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mint run Carthage/Carthage carthage copy-frameworks\n";
+		};
+		7B612E692564BAA200F1C5BB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "APP_PATH=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"\n\n# This script loops through the frameworks embedded in the application and\n# removes unused architectures.\nfind \"$APP_PATH\" -name '*.framework' -type d | while read -r FRAMEWORK\ndo\nFRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)\nFRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"\necho \"Executable is $FRAMEWORK_EXECUTABLE_PATH\"\n\nEXTRACTED_ARCHS=()\n\nfor ARCH in $ARCHS\ndo\necho \"Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME\"\nlipo -extract \"$ARCH\" \"$FRAMEWORK_EXECUTABLE_PATH\" -o \"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\"\nEXTRACTED_ARCHS+=(\"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\")\ndone\n\necho \"Merging extracted architectures: ${ARCHS}\"\nlipo -o \"$FRAMEWORK_EXECUTABLE_PATH-merged\" -create \"${EXTRACTED_ARCHS[@]}\"\nrm \"${EXTRACTED_ARCHS[@]}\"\n\necho \"Replacing original executable with thinned version\"\nrm \"$FRAMEWORK_EXECUTABLE_PATH\"\nmv \"$FRAMEWORK_EXECUTABLE_PATH-merged\" \"$FRAMEWORK_EXECUTABLE_PATH\"\n\ndone\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7B612DCE2564A6C100F1C5BB /* Sources */ = {
@@ -286,17 +364,32 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9SAVXK266C;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/AmazonChimeSDKSample/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/Static",
+				);
 				INFOPLIST_FILE = AmazonChimeSDKforCarthage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"$(FRAMEWORK_SEARCH_PATHS)",
+				);
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"$(inherited)",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.usayuki.AmazonChimeSDKforCarthage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -305,17 +398,32 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9SAVXK266C;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/AmazonChimeSDKSample/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/Static",
+				);
 				INFOPLIST_FILE = AmazonChimeSDKforCarthage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"$(FRAMEWORK_SEARCH_PATHS)",
+				);
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"$(inherited)",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.usayuki.AmazonChimeSDKforCarthage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
